@@ -31,7 +31,7 @@ response_create_pokemon = requests.post(f'{host}/pokemons',
                                          "photo": "https://dolnikov.ru/pokemons/albums/001.png"},
                                    headers={"trainer_token":token, "Content-Type" : "application/json"})
 id_pok =response_create_pokemon.json()["id"]
-print(response_create_pokemon.json()["id"])
+print(response_create_pokemon.text)
 
 
 #смена имени покемона
